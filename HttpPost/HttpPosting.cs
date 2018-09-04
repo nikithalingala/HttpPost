@@ -9,24 +9,29 @@ namespace HttpPost
 {
     class HttpPosting
     {
-        public String postGooglePage()
+        public async Task<string> PostHttpAsync()
         {
             string url = "http://www.google.com";
             HttpClient httpClient = new HttpClient();
             Task<string> getTask = httpClient.GetStringAsync(url);
             string getUrlResult = getTask.Result;
-            IEnumerator<KeyValuePair<string, string>> queries = new IEnumerator<KeyValuePair<string, string>>()
+           
+             return getUrlResult;
+            
+        }
+        HttpClient http = new HttpClient();
+        IEnumerator<KeyValuePair<string, string>> queries = new IEnumerator<KeyValuePair<string, string>>()
             {
                 new KeyValuePair<string,string>("query1","hello")
             };
-            HttpContent q = new FormUrlEncodedContent(queries);
-            HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response = await httpClient.GetAsync(url);
-            HttpClient content = response.Content();
-            HttpContentHeaders headers = content.headers;
-            return getUrlResult;
-        }
-        
+        HttpContent q = new FormUrlEncodedContent(queries);
+        HttpClient httpClient = new HttpClient();
+        HttpResponseMessage response = await httpClient.PostAsync(url);
+        HttpClient content = response.Content();
+        HttpContentHeaders headers = content.headers;
+
+
+
     }
 
 }

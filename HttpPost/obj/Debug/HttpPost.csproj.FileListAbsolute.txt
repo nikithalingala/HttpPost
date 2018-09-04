@@ -1,0 +1,7 @@
+E:\c#\HttpPost\HttpPost\bin\Debug\HttpPost.exe.config
+E:\c#\HttpPost\HttpPost\bin\Debug\HttpPost.exe
+E:\c#\HttpPost\HttpPost\bin\Debug\HttpPost.pdb
+E:\c#\HttpPost\HttpPost\obj\Debug\HttpPost.csprojAssemblyReference.cache
+E:\c#\HttpPost\HttpPost\obj\Debug\HttpPost.csproj.CoreCompileInputs.cache
+E:\c#\HttpPost\HttpPost\obj\Debug\HttpPost.exe
+E:\c#\HttpPost\HttpPost\obj\Debug\HttpPost.pdb
